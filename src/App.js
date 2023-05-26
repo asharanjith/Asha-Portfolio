@@ -3,17 +3,16 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
+import Skills from './components/Skills/Skills';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <h1>Portfolio</h1>
-      <Home />
-      <Projects />
-      <Contact />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Navbar />
+    <Home />
+    <Skills />
+    <Projects />
+    <Contact />
+  </div>
+);
 
 export default App;
