@@ -1,11 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { GiCrossedSabres } from 'react-icons/gi';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import style from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({
+  onHomeClick, onProjectsClick, onContactClick, onSkillsClick,
+}) => {
   const [show, setShow] = React.useState(false);
+  const [themeMode, setThemeMode] = React.useState('light');
+  const lightModeStyles = {
+    backgroundColor: '#ffffff',
+    color: '#000000',
+  };
+
+  const darkModeStyles = {
+    backgroundColor: '#000000',
+    color: '#ffffff',
+  };
+
+  const toggleThemeMode = () => {
+    setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+  };
   const closemenu = () => {
     setShow(false);
   };
@@ -14,13 +31,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={style.navbarContainer}>
+    <nav className={style.navbarContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
       <img src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1" alt="logo" />
       <div className={show ? `${style.navbarlink} ${style.navbarlinkmobile}` : `${style.navbarlink}`}>
         <GiCrossedSabres onClick={closemenu} className={style.closeIcon} />
         <div className={style.navbarlinklist}>
           <NavLink
-            onClick={closemenu}
+            onClick={() => {
+              closemenu();
+              onHomeClick();
+            }}
             exact
             to="/"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
@@ -28,7 +48,10 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            onClick={closemenu}
+            onClick={() => {
+              closemenu();
+              onSkillsClick();
+            }}
             exact
             to="/skills"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
@@ -36,7 +59,10 @@ const Navbar = () => {
             Skills
           </NavLink>
           <NavLink
-            onClick={closemenu}
+            onClick={() => {
+              closemenu();
+              onProjectsClick();
+            }}
             exact
             to="/projects"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
@@ -44,7 +70,10 @@ const Navbar = () => {
             Projects
           </NavLink>
           <NavLink
-            onClick={closemenu}
+            onClick={() => {
+              closemenu();
+              onContactClick();
+            }}
             exact
             to="/contact"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
@@ -57,9 +86,19 @@ const Navbar = () => {
       <div className={style.hamburger}>
         <RxHamburgerMenu onClick={showmenu} className={style.hamburgerIcon} />
       </div>
+      <button onClick={toggleThemeMode} type="button">
+        {themeMode === 'light' ? 'Dark Mode' : 'Light Mode'}
+      </button>
 
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  onHomeClick: PropTypes.func.isRequired,
+  onProjectsClick: PropTypes.func.isRequired,
+  onContactClick: PropTypes.func.isRequired,
+  onSkillsClick: PropTypes.func.isRequired,
 };
 
 export default Navbar;

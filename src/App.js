@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React, { useRef } from 'react';
+// import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navbarList/Navbar';
 import Home from './components/Home';
@@ -6,10 +7,51 @@ import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
 
-const App = () => (
-  <div className="App">
-    <Navbar />
-    <Home />
+const App = () => {
+  const homeRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const skillsRef = useRef(null);
+
+  const scrollToHome = () => {
+    homeRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToProjects = () => {
+    projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToSkills = () => {
+    skillsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <div className="App">
+      <Navbar
+        onHomeClick={scrollToHome}
+        onProjectsClick={scrollToProjects}
+        onContactClick={scrollToContact}
+        onSkillsClick={scrollToSkills}
+      />
+
+      <div ref={homeRef}>
+        <Home />
+      </div>
+      <div ref={skillsRef}>
+        <Skills />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+
+      {/* <Home />
     <Skills />
     <Projects />
     <Contact />
@@ -19,8 +61,9 @@ const App = () => (
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
-  </div>
-);
+    </Routes> */}
+    </div>
+  );
+};
 
 export default App;
