@@ -13,7 +13,7 @@ const Navbar = ({
 
   const lightModeStyles = {
     backgroundColor: '#f2eded',
-    color: '#61dafb',
+    color: 'rgb(32 161 196)',
     opacity: '1',
   };
 
@@ -43,7 +43,6 @@ const Navbar = ({
             exact
             to="/"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
-            style={themeMode === 'light' ? lightModeStyles : darkModeStyles}
           >
             Home
           </NavLink>
@@ -80,7 +79,7 @@ const Navbar = ({
           >
             Contact
           </NavLink>
-          <button onClick={toggleThemeMode} type="button">
+          <button onClick={toggleThemeMode} type="button" style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
             {themeMode === 'light' ? <BsFillMoonStarsFill /> : <BsFillBrightnessHighFill />}
           </button>
         </div>
