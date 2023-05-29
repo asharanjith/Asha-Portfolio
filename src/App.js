@@ -8,11 +8,16 @@ import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
 
 const App = () => {
+  const [themeMode, setThemeMode] = React.useState('dark');
+
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const skillsRef = useRef(null);
 
+  const toggleThemeMode = () => {
+    setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+  };
   const scrollToHome = () => {
     homeRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -36,6 +41,8 @@ const App = () => {
         onProjectsClick={scrollToProjects}
         onContactClick={scrollToContact}
         onSkillsClick={scrollToSkills}
+        toggleThemeMode={toggleThemeMode}
+        themeMode={themeMode}
       />
 
       <div ref={homeRef}>

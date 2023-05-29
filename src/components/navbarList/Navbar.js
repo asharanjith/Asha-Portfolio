@@ -7,10 +7,10 @@ import { BsFillBrightnessHighFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import style from './Navbar.module.css';
 
 const Navbar = ({
-  onHomeClick, onProjectsClick, onContactClick, onSkillsClick,
+  onHomeClick, onProjectsClick, onContactClick, onSkillsClick, toggleThemeMode, themeMode,
 }) => {
   const [show, setShow] = React.useState(false);
-  const [themeMode, setThemeMode] = React.useState('dark');
+
   const lightModeStyles = {
     backgroundColor: '#f2eded',
     color: '#61dafb',
@@ -22,9 +22,6 @@ const Navbar = ({
     color: '#81dafb',
   };
 
-  const toggleThemeMode = () => {
-    setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-  };
   const closemenu = () => {
     setShow(false);
   };
@@ -102,6 +99,8 @@ Navbar.propTypes = {
   onProjectsClick: PropTypes.func.isRequired,
   onContactClick: PropTypes.func.isRequired,
   onSkillsClick: PropTypes.func.isRequired,
+  toggleThemeMode: PropTypes.func.isRequired,
+  themeMode: PropTypes.string.isRequired,
 };
 
 export default Navbar;
