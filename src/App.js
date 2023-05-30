@@ -48,11 +48,11 @@ const App = () => {
       <div ref={homeRef}>
         <Home />
       </div>
-      <div ref={skillsRef}>
-        <Skills />
-      </div>
       <div ref={projectsRef}>
         <Projects />
+      </div>
+      <div ref={skillsRef}>
+        <Skills />
       </div>
       <div ref={contactRef}>
         <Contact />

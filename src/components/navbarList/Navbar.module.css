@@ -83,10 +83,10 @@
   
   .navbarlinklist button{
     background: none;
-    border: 1px solid #61dafb;
-    border-radius: 20px;
+    border: 2px solid rgb(32 161 196);
+    border-radius: 50px;
     padding: 10px;
-    color: #61dafb;
+    color: rgb(32 161 196);
     font-weight: 600;
     cursor: pointer;
     margin-right:30px;

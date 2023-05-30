@@ -49,17 +49,6 @@ const Navbar = ({
           <NavLink
             onClick={() => {
               closemenu();
-              onSkillsClick();
-            }}
-            exact
-            to="/skills"
-            className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
-          >
-            Skills
-          </NavLink>
-          <NavLink
-            onClick={() => {
-              closemenu();
               onProjectsClick();
             }}
             exact
@@ -67,6 +56,17 @@ const Navbar = ({
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
             Projects
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              closemenu();
+              onSkillsClick();
+            }}
+            exact
+            to="/skills"
+            className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
+          >
+            Skills
           </NavLink>
           <NavLink
             onClick={() => {
