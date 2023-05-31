@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 import style from './Projects.module.css';
+import myProjects from './myProjects.json';
 
 const Projects = () => {
   const [index, setIndex] = React.useState(0);
@@ -22,7 +23,7 @@ const Projects = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=600https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src={myProjects[1].image}
             alt="First slide"
           />
           <Carousel.Caption>
