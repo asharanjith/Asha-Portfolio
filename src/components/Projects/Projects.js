@@ -1,17 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Carousel from 'react-bootstrap/Carousel';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 import style from './Projects.module.css';
 import myProjects from './myProjects.json';
 
-const Projects = () => {
+const Projects = ({ themeMode }) => {
   const [index, setIndex] = React.useState(0);
+
+  const lightModeStyles = {
+    backgroundColor: '#f2eded',
+    color: 'rgb(32 161 196)',
+    opacity: '1',
+  };
+
+  const darkModeStyles = {
+    backgroundColor: '#282c34',
+    color: '#81dafb',
+  };
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
   return (
-    <div className={style.projectContainer}>
+    <div className={style.projectContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
       <h4>My projects</h4>
       {/* <div className={style.slider}> */}
       <Carousel
@@ -19,14 +31,15 @@ const Projects = () => {
         prevIcon={<AiFillLeftCircle aria-hidden="true" className={`${style.icon}`} />}
         activeIndex={index}
         onSelect={handleSelect}
+        style={themeMode === 'light' ? lightModeStyles : darkModeStyles}
       >
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className={style.image}
             src={myProjects[1].image}
             alt="First slide"
           />
-          <Carousel.Caption>
+          <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} className={style.caption}>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             <a href="https://www.google.com">Google</a>
@@ -57,6 +70,10 @@ const Projects = () => {
     </div>
   // </div>
   );
+};
+
+Projects.propTypes = {
+  themeMode: PropTypes.string.isRequired,
 };
 
 export default Projects;

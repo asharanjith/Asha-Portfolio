@@ -19,16 +19,17 @@
 
   @keyframes rotateAnimation {
     0% {
-      transform: rotate(0deg);
+      transform: rotateY(0deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotateY(360deg);
     }
   }
 
   .logo {
-    animation: rotateAnimation 4s linear infinite;
-  }
+    animation: rotateAnimation 4s linear 1;
+    animation-fill-mode: both;
+  } 
 
   .logo:hover {
     animation-play-state: paused;

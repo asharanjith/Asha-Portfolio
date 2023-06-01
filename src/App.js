@@ -46,16 +46,24 @@ const App = () => {
       />
 
       <div ref={homeRef}>
-        <Home />
+        <Home
+          themeMode={themeMode}
+        />
       </div>
       <div ref={projectsRef}>
-        <Projects />
+        <Projects
+          themeMode={themeMode}
+        />
       </div>
       <div ref={skillsRef}>
-        <Skills />
+        <Skills
+          themeMode={themeMode}
+        />
       </div>
       <div ref={contactRef}>
-        <Contact />
+        <Contact
+          themeMode={themeMode}
+        />
       </div>
 
       {/* <Home />
