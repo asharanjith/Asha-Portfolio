@@ -12,7 +12,7 @@ const Projects = () => {
   };
   return (
     <div className={style.projectContainer}>
-      <h4>My recent projects</h4>
+      <h4>My projects</h4>
       {/* <div className={style.slider}> */}
       <Carousel
         nextIcon={<AiFillRightCircle aria-hidden="true" className={`${style.icon}`} />}

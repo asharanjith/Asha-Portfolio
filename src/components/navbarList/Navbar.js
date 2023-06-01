@@ -5,6 +5,7 @@ import { GiCrossedSabres } from 'react-icons/gi';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsFillBrightnessHighFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import style from './Navbar.module.css';
+import logo from '../../assets/asha-logo.png';
 
 const Navbar = ({
   onHomeClick, onProjectsClick, onContactClick, onSkillsClick, toggleThemeMode, themeMode,
@@ -31,7 +32,7 @@ const Navbar = ({
 
   return (
     <nav className={style.navbarContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
-      <img src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1" alt="logo" />
+      <img src={logo} alt="logo" className={style.logo} />
       <div className={show ? `${style.navbarlink} ${style.navbarlinkmobile}` : `${style.navbarlink}`} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
         <GiCrossedSabres onClick={closemenu} className={style.closeIcon} />
         <div className={style.navbarlinklist} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
