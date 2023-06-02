@@ -1,6 +1,4 @@
 import React, { useRef } from 'react';
-// import { Routes, Route, Navigate } from 'react-router-dom';
-import './App.css';
 import Navbar from './components/navbarList/Navbar';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
@@ -65,18 +63,6 @@ const App = () => {
           themeMode={themeMode}
         />
       </div>
-
-      {/* <Home />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes> */}
     </div>
   );
 };

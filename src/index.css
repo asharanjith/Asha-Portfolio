@@ -25,7 +25,9 @@ code {
   color: #fff;
   text-align: center;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.5;  
+  font-size: 1.2rem;
+  animation: captionEntry 1s ease-in-out;
 }
 
 .imageBox{
@@ -38,6 +40,18 @@ code {
   object-fit: contain;
   object-position: center;
   border-radius: 20px;
+}
+
+@keyframes captionEntry {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px){
@@ -56,5 +70,7 @@ code {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
+    font-size: 0.8rem;
+
   }
 }

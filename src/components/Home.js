@@ -5,7 +5,7 @@ import style from './Home.module.css';
 
 const Home = ({ themeMode }) => {
   const lightModeStyles = {
-    backgroundColor: '#f2eded',
+    backgroundColor: '#ffffff',
     color: 'rgb(32 161 196)',
     opacity: '1',
   };
