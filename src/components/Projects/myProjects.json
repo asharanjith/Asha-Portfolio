@@ -2,7 +2,7 @@
     {
     "id": 1,
     "name": "Stay a While",
-    "image": "www.google.com/js/jquery.iframe-transport.js",
+    "image": "./stay-a-while.jpg",
     "description": "Stay A While Frontend holds the front-end development source React-Redux app that allows users to reserve an apartment or home.",
     "githubLink": "https://github.com/asharanjith/stay-a-while-front-end",
     "liveLink": "https://stay-a-while-front-end.vercel.app/"
@@ -10,7 +10,7 @@
     {
     "id": 2,
     "name": "Budget Tracker",
-    "image": "./money-minder.jpg",
+    "image": "./budget.png",
     "description": "Mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.",
     "githubLink": "https://github.com/asharanjith/Budget-Tracker",
     "liveLink": "https://money-minder-djf9.onrender.com/"

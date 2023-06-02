@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 import style from './Projects.module.css';
 import myProjects from './myProjects.json';
@@ -10,8 +11,7 @@ const Projects = ({ themeMode }) => {
 
   const lightModeStyles = {
     backgroundColor: '#f2eded',
-    color: 'rgb(32 161 196)',
-    opacity: '1',
+    color: 'rgb(0 0 0)',
   };
 
   const darkModeStyles = {
@@ -25,50 +25,57 @@ const Projects = ({ themeMode }) => {
   return (
     <div className={style.projectContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
       <h4>My projects</h4>
-      {/* <div className={style.slider}> */}
-      <Carousel
-        nextIcon={<AiFillRightCircle aria-hidden="true" className={`${style.icon}`} />}
-        prevIcon={<AiFillLeftCircle aria-hidden="true" className={`${style.icon}`} />}
-        activeIndex={index}
-        onSelect={handleSelect}
-        style={themeMode === 'light' ? lightModeStyles : darkModeStyles}
-      >
-        <Carousel.Item>
-          <img
-            className={style.image}
-            src={myProjects[1].image}
-            alt="First slide"
-          />
-          <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} className={style.caption}>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <a href="https://www.google.com">Google</a>
-            <button type="button" className="btn btn-primary">Primary</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="https://images.pexels.com/photos/2360673/pexels-photo-2360673.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Third slide" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="https://www.google.com">Google</a>
-            <button type="button" className="btn btn-primary">Primary</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Third slide" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-            <a href="https://www.google.com">Google</a>
-            <button type="button" className="btn btn-primary">Primary</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <div className={style.slider}>
+        <Carousel
+          nextIcon={<AiFillRightCircle aria-hidden="true" className={`${style.icon}`} />}
+          prevIcon={<AiFillLeftCircle aria-hidden="true" className={`${style.icon}`} />}
+          activeIndex={index}
+          onSelect={handleSelect}
+          style={themeMode === 'light' ? lightModeStyles : darkModeStyles}
+        >
+          <Carousel.Item>
+            <div className={style.item}>
+              <div className="w-50 imageBox">
+                <Image
+                  className="d-block w-100 image"
+                  src={myProjects[1].image}
+                  alt="First slide"
+                  fluid
+                />
+              </div>
+              <div className={style.caption}>
+                <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} classname="carousel-caption">
+                  <h3>{myProjects[1].name}</h3>
+                  <p>{myProjects[1].description}</p>
+                  <button type="button" className={style.buttonLink}><a href={myProjects[1].liveLink}>See Live</a></button>
+                  <button type="button" className={style.buttonLink}><a href={myProjects[1].githubLink}>See Source</a></button>
+                </Carousel.Caption>
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="d-flex">
+              <div className="w-50">
+                <Image
+                  className="d-block w-100"
+                  src={myProjects[0].image}
+                  alt="First slide"
+                  fluid
+                />
+              </div>
+              <div className="w-50">
+                <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} className="text-right">
+                  <h3>{myProjects[0].name}</h3>
+                  <p>{myProjects[0].description}</p>
+                  <button type="button" className={style.buttonLink}><a href={myProjects[0].liveLink}>See Live</a></button>
+                  <button type="button" className={style.buttonLink}><a href={myProjects[0].githubLink}>See Source</a></button>
+                </Carousel.Caption>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </div>
-  // </div>
   );
 };
 
