@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Navbar from './components/navbarList/Navbar';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
@@ -6,7 +6,7 @@ import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
 
 const App = () => {
-  const [themeMode, setThemeMode] = React.useState('dark');
+  const [themeMode, setThemeMode] = useState('dark');
 
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
@@ -16,6 +16,7 @@ const App = () => {
   const toggleThemeMode = () => {
     setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
   };
+
   const scrollToHome = () => {
     homeRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -43,22 +44,22 @@ const App = () => {
         themeMode={themeMode}
       />
 
-      <div ref={homeRef}>
+      <div ref={homeRef} id="home">
         <Home
           themeMode={themeMode}
         />
       </div>
-      <div ref={projectsRef}>
+      <div ref={projectsRef} id="projects">
         <Projects
           themeMode={themeMode}
         />
       </div>
-      <div ref={skillsRef}>
+      <div ref={skillsRef} id="skills">
         <Skills
           themeMode={themeMode}
         />
       </div>
-      <div ref={contactRef}>
+      <div ref={contactRef} id="contact">
         <Contact
           themeMode={themeMode}
         />

@@ -13,7 +13,7 @@ const Navbar = ({
   const [show, setShow] = React.useState(false);
 
   const lightModeStyles = {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f2efff',
     color: 'rgb(32 161 196)',
     opacity: '1',
   };

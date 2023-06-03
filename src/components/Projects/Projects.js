@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
+import { BsFillEyeFill } from 'react-icons/bs';
+import { TbSourceCode } from 'react-icons/tb';
 import style from './Projects.module.css';
 import myProjects from './myProjects.json';
 
@@ -11,7 +13,7 @@ const Projects = ({ themeMode }) => {
 
   const lightModeStyles = {
     backgroundColor: '#ffffff',
-    color: 'rgb(0 0 0)',
+    color: 'rgb(32 161 196)',
   };
 
   const darkModeStyles = {
@@ -24,7 +26,7 @@ const Projects = ({ themeMode }) => {
   };
   return (
     <div className={style.projectContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
-      <h4>My projects</h4>
+      <h2 className="text-decoration-underline">My Recent Works</h2>
       <div className={style.slider}>
         <Carousel
           nextIcon={<AiFillRightCircle aria-hidden="true" className={`${style.icon}`} />}
@@ -50,11 +52,22 @@ const Projects = ({ themeMode }) => {
                     <p>{project.description}</p>
                     <div className={style.skillsBox}>
                       {project.skills.map((skill, index) => (
+                        // eslint-disable-next-line react/no-array-index-key
                         <span key={index} className={style.skills}>{skill}</span>
                       ))}
                     </div>
-                    <button type="button" className={style.buttonLink}><a href={project.liveLink}>See Live</a></button>
-                    <button type="button" className={style.buttonLink}><a href={project.githubLink}>See Source</a></button>
+                    <button type="button" className={style.buttonLink}>
+                      <a href={project.liveLink}>
+                        <BsFillEyeFill className={style.captionIcon} />
+                        See Live
+                      </a>
+                    </button>
+                    <button type="button" className={style.buttonLink}>
+                      <a href={project.githubLink}>
+                        <TbSourceCode className={style.captionIcon} />
+                        See Source
+                      </a>
+                    </button>
                   </Carousel.Caption>
                 </div>
               </div>

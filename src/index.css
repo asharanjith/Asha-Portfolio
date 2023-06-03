@@ -54,6 +54,11 @@ code {
   }
 }
 
+.listAnimation {
+  animation: captionEntry 3s ease-in-out;
+} 
+
+
 @media (max-width: 768px){
   .image{
     width: 100% !important;
