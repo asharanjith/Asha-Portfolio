@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #282c34; */
@@ -13,6 +13,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Pacifico', cursive;
+}
+
 
 .carousel-caption{
   position: relative;
@@ -28,6 +33,24 @@ code {
   opacity: 0.5;  
   font-size: 1.2rem;
   animation: captionEntry 1s ease-in-out;
+}
+
+.buttonLink{
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonLink:hover{
+  background-color: #fff;
+  color: #61dafb;
+  border: 1px solid #61dafb;
 }
 
 .imageBox{
@@ -77,5 +100,9 @@ code {
     width: 100%;
     font-size: 0.8rem;
 
+  }
+  .buttonLink{
+    font-size: 15px;
+    padding: 5px;
   }
 }

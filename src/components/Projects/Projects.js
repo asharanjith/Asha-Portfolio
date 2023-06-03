@@ -47,7 +47,7 @@ const Projects = ({ themeMode }) => {
                   />
                 </div>
                 <div className={style.caption}>
-                  <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} classname="carousel-caption">
+                  <Carousel.Caption style={themeMode === 'light' ? lightModeStyles : darkModeStyles} className="carousel-caption">
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
                     <div className={style.skillsBox}>
@@ -56,13 +56,13 @@ const Projects = ({ themeMode }) => {
                         <span key={index} className={style.skills}>{skill}</span>
                       ))}
                     </div>
-                    <button type="button" className={style.buttonLink}>
+                    <button type="button" className="buttonLink">
                       <a href={project.liveLink}>
                         <BsFillEyeFill className={style.captionIcon} />
                         See Live
                       </a>
                     </button>
-                    <button type="button" className={style.buttonLink}>
+                    <button type="button" className="buttonLink">
                       <a href={project.githubLink}>
                         <TbSourceCode className={style.captionIcon} />
                         See Source

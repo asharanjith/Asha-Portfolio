@@ -21,15 +21,20 @@ const Home = ({ themeMode }) => {
           <img src={homepage} className={style.homeImage} alt="..." />
         </div>
         <div className={style.descriptionContainer}>
-          {/* <div className="card-body"> */}
-          <h5 className={style.title}>Card title</h5>
+          <h2 className={style.title}>Hey there. I&apos;m Asha.</h2>
+          <h4>I&apos;m a Full Stack Developer</h4>
           <p className={style.description}>
-            This is a wider card with supporting
-            text below as a natural lead-in to additional content.
-            This content is a little bit longer.
+            I can help you build a product,
+            feature or website. Look through
+            some of my work and experience!
+            If you like what you see and have a project
+            you need coded, don&apos;t hestiate to contact me.
           </p>
-          <p className={style.resume}><small className="text-muted">Last updated 3 mins ago</small></p>
-          {/* </div> */}
+          <button type="button" className="buttonLink">
+            <a href="https://drive.google.com/file/d/1d_Ofo5C37NGMlP8L5upFXYChV1axO-VW/view?usp=sharing" target="_blank" rel="noreferrer">
+              Get my Resume
+            </a>
+          </button>
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import {
 } from 'react-icons/si';
 import { GiCapybara } from 'react-icons/gi';
 import { GoRuby } from 'react-icons/go';
+import { MdOutlineMobileFriendly } from 'react-icons/md';
 import style from './Skills.module.css';
 
 const Skills = ({ themeMode }) => {
@@ -120,7 +121,11 @@ const Skills = ({ themeMode }) => {
             {'  '}
             Capybara
           </li>
-          <li>Devise</li>
+          <li>
+            <MdOutlineMobileFriendly />
+            {'  '}
+            Devise
+          </li>
           <li>CanCanCan</li>
         </ul>
         <ul>

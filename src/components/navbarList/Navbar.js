@@ -41,7 +41,6 @@ const Navbar = ({
               closemenu();
               onHomeClick();
             }}
-            exact
             to="/"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
@@ -52,7 +51,6 @@ const Navbar = ({
               closemenu();
               onProjectsClick();
             }}
-            exact
             to="/projects"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
@@ -63,7 +61,6 @@ const Navbar = ({
               closemenu();
               onSkillsClick();
             }}
-            exact
             to="/skills"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
@@ -74,7 +71,6 @@ const Navbar = ({
               closemenu();
               onContactClick();
             }}
-            exact
             to="/contact"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
