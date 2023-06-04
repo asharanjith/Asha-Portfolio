@@ -21,7 +21,10 @@ const Home = ({ themeMode }) => {
           <img src={homepage} className={style.homeImage} alt="..." />
         </div>
         <div className={style.descriptionContainer}>
-          <h2 className={style.title}>Hey there. I&apos;m Asha.</h2>
+          <h2 className={style.title}>
+            Hey there. I&apos;m
+            <span> Asha.</span>
+          </h2>
           <h4>I&apos;m a Full Stack Developer</h4>
           <p className={style.description}>
             I can help you build a product,

@@ -85,7 +85,6 @@ const Navbar = ({
       <div className={style.hamburger}>
         <RxHamburgerMenu onClick={showmenu} className={style.hamburgerIcon} />
       </div>
-
     </nav>
   );
 };

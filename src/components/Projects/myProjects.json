@@ -22,7 +22,7 @@
     "name": "Food Recipes App",
     "image": "./food-recipes.png",
     "skills": ["Ruby on Rails", "Render","PostgreSQL", "Rspec", "Capybara", "Bootstrap"],
-    "description": "The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.",
+    "description": "The app keeps track of all your recipes and ingredients. It will allow you to save ingredients, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.",
     "githubLink": "https://github.com/asharanjith/Food-Recipes-App",
     "liveLink": "https://food-recipes-n92f.onrender.com/"
     },

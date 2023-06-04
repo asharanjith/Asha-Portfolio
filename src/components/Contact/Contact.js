@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { FaGithubSquare, FaLinkedin, FaAngellist } from 'react-icons/fa';
 import { BsMedium } from 'react-icons/bs';
 import { ImMail } from 'react-icons/im';
-// import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
 import style from './Contact.module.css';
 import contactImage from '../../assets/contactImage.png';
 
@@ -21,7 +20,7 @@ const Contact = ({ themeMode }) => {
     <div className={style.homePage} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
       <div className={style.homeContainer}>
         <div className={style.descriptionContainer}>
-          <h2 className={style.title}>Hey there,</h2>
+          <h2 className={style.title}>Hi,</h2>
           <p className={style.description}>
             If you have an application you are interested in developing,
             a feature that you need built or a project that needs coding.
