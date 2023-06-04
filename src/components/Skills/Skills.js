@@ -47,12 +47,12 @@ const Skills = ({ themeMode }) => {
           <li>
             <FaHtml5 />
             {'  '}
-            HTML
+            HTML5
           </li>
           <li>
             <FaCss3 />
             {'  '}
-            CSS
+            CSS3
           </li>
           <li>
             <TbBrandJavascript />
@@ -99,7 +99,7 @@ const Skills = ({ themeMode }) => {
           <li>
             <SiRubyonrails />
             {'  '}
-            Ruby on Rails
+            Rails
           </li>
           <li>
             <SiPostgresql />

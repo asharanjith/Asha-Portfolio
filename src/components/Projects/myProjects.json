@@ -2,7 +2,7 @@
     {
     "id": 1,
     "name": "Stay a While",
-    "image": "./stay-a-while.jpg",
+    "image": "./newStay1.png",
     "skills": ["React", "Redux", "Ruby on Rails", "Render", "CSS", "PostgreSQL", "Jest","Vercel"],
     "description": "Stay A While Frontend holds the front-end development source React-Redux app that allows users to reserve an apartment or home.",
     "githubLink": "https://github.com/asharanjith/stay-a-while-front-end",
@@ -20,11 +20,11 @@
     {
     "id": 3,
     "name": "Food Recipes App",
-    "image": "https://food-recipes-n92f.onrender.com/",
+    "image": "./food-recipes.png",
     "skills": ["Ruby on Rails", "Render","PostgreSQL", "Rspec", "Capybara", "Bootstrap"],
-    "description": "jQuery.iframe-transport",
-    "githubLink": "https://github.com/",
-    "liveLink": "http://www.google.com/"
+    "description": "The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.",
+    "githubLink": "https://github.com/asharanjith/Food-Recipes-App",
+    "liveLink": "https://food-recipes-n92f.onrender.com/"
     },
     {
     "id": 4,

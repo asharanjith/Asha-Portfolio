@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .homeContainer{
@@ -12,7 +12,7 @@
     flex-direction: row-reverse;
     align-items: center;
     /* justify-content: space-around; */
-    height: 100vh;
+    height: 100%;
 }
 
 .imageContainer{
@@ -35,13 +35,13 @@
 
 @media (max-width: 768px) {
     .homeContainer{
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: 100%;
         width: 100%;
     }
 
     .imageContainer{
-        height: 50%;
+        /* height: 50%; */
         width: 100%;
     }
 
@@ -51,9 +51,10 @@
     }
 
     .descriptionContainer{
-        height: 50%;
+        /* height: 50%; */
         width: 100%;
         align-items: center;
         justify-content: flex-start;
+        padding-top: 75px;
     }
 }

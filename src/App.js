@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
+import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
 import Navbar from './components/navbarList/Navbar';
 import Home from './components/Home';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Skills from './components/Skills/Skills';
+import './App.css';
 
 const App = () => {
   const [themeMode, setThemeMode] = useState('dark');
@@ -63,6 +65,9 @@ const App = () => {
         <Contact
           themeMode={themeMode}
         />
+      </div>
+      <div className="scrollTop">
+        <a href="#home" aria-label="scrollToTop"><MdKeyboardDoubleArrowUp className="iconvector" /></a>
       </div>
     </div>
   );

@@ -56,6 +56,11 @@ h1, h2, h3, h4, h5, h6{
 .imageBox{
   width: 100%;
   height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image{
@@ -63,6 +68,7 @@ h1, h2, h3, h4, h5, h6{
   object-fit: contain;
   object-position: center;
   border-radius: 20px;
+  animation: captionEntry 1s ease-in-out;
 }
 
 @keyframes captionEntry {
