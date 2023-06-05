@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  FaHtml5, FaCss3, FaReact, FaBootstrap, FaFigma,
+  FaHtml5, FaCss3, FaReact, FaBootstrap, FaFigma, FaChrome, FaLaptopCode, FaPeopleCarry,
 } from 'react-icons/fa';
 import { TbBrandJavascript } from 'react-icons/tb';
 import {
-  SiReactrouter, SiRedux, SiJest, SiRuby, SiRubyonrails, SiPostgresql, SiJsonwebtokens,
+  SiReactrouter, SiRedux, SiJest, SiRuby, SiRubyonrails, SiWebauthn,
+  SiPostgresql, SiJsonwebtokens, SiPostman, SiRender, SiVercel,
 } from 'react-icons/si';
+import { BsGit, BsGithub, BsSlack } from 'react-icons/bs';
 import { GiCapybara } from 'react-icons/gi';
 import { GoRuby } from 'react-icons/go';
 import { MdOutlineMobileFriendly } from 'react-icons/md';
@@ -126,18 +128,58 @@ const Skills = ({ themeMode }) => {
             {'  '}
             Devise
           </li>
-          <li>CanCanCan</li>
+          <li>
+            <SiWebauthn />
+            {'  '}
+            CanCanCan
+          </li>
         </ul>
         <ul>
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>Chrome DevTools</li>
-          <li>Slack</li>
-          <li>Postman</li>
-          <li>Remote Pair Programming</li>
-          <li>Render</li>
-          <li>Vercel</li>
-          <li>Mentoring</li>
+          <li>
+            <BsGit />
+            {'  '}
+            Git
+          </li>
+          <li>
+            <BsGithub />
+            {'  '}
+            GitHub
+          </li>
+          <li>
+            <FaChrome />
+            {'  '}
+            Chrome DevTools
+          </li>
+          <li>
+            <BsSlack />
+            {'  '}
+            Slack
+          </li>
+          <li>
+            <SiPostman />
+            {'  '}
+            Postman
+          </li>
+          <li>
+            <FaLaptopCode />
+            {'  '}
+            Remote Pair Programming
+          </li>
+          <li>
+            <SiRender />
+            {'  '}
+            Render
+          </li>
+          <li>
+            <SiVercel />
+            {'  '}
+            Vercel
+          </li>
+          <li>
+            <FaPeopleCarry />
+            {'  '}
+            Mentoring
+          </li>
         </ul>
       </div>
     </div>
