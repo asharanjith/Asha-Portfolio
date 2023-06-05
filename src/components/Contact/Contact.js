@@ -7,6 +7,22 @@ import style from './Contact.module.css';
 import contactImage from '../../assets/contactImage.png';
 
 const Contact = ({ themeMode }) => {
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('contactImage');
+      const position = element.getBoundingClientRect();
+
+      if (position.top < window.innerHeight) {
+        element.classList.add('listAnimation');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const lightModeStyles = {
     backgroundColor: 'rgb(244 240 240)',
     color: 'rgb(32 161 196)',

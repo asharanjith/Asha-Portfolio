@@ -4,7 +4,7 @@
     "name": "Stay a While",
     "image": "./newStay1.png",
     "skills": ["React", "Redux", "Ruby on Rails", "Render", "CSS", "PostgreSQL", "Jest","Vercel"],
-    "description": "Stay A While Frontend holds the front-end development source React-Redux app that allows users to reserve an apartment or home.",
+    "description": "Stay A While Frontend holds the front-end development source of React-Redux app that allows users to reserve an apartment or home. The app allows users to list their properties.",
     "githubLink": "https://github.com/asharanjith/stay-a-while-front-end",
     "liveLink": "https://stay-a-while-front-end.vercel.app/"
     },
@@ -27,12 +27,30 @@
     "liveLink": "https://food-recipes-n92f.onrender.com/"
     },
     {
-    "id": 4,
-    "name": "jquery.iframe-transport.js",
-    "image": "www.google.com/js/jquery.iframe-transport.js",
-    "skills": ["Ruby on Rails", "Render","PostgreSQL", "Rspec", "Capybara", "Bootstrap"],
-    "description": "jQuery.iframe-transport",
-    "githubLink": "https://github.com/",
-    "liveLink": "http://www.google.com/"
+        "id": 5,
+        "name": "Movie Max",
+        "image": "./movie-max.png",
+        "skills": ["HTML5", "CSS3","JavaScript"],
+        "description": "A web app for movies using TVmaze API for showing movies and its details. The webapp have 2 user interfaces. A home page showing a list of movies items that you can like. A popup window with more data about the movie that you can use to comment on it.",
+        "githubLink": "https://github.com/asharanjith/Javascript-Group-Capstone",
+        "liveLink": "https://asharanjith.github.io/Javascript-Group-Capstone/"
+    },
+    {
+        "id": 6,
+        "name": "Beauty Summit",
+        "image": "./beauty-summit.png",
+        "skills": ["HTML5", "CSS3","JavaScript"],
+        "description": "A webpage recreated based on the design by Cindy-Shin-in-Behance",
+        "githubLink": "https://github.com/asharanjith/Capstone-Project-1",
+        "liveLink": "https://asharanjith.github.io/Capstone-Project-1/"
+    },
+    {
+    "id": 7,
+    "name": "Awesome Books",
+    "image": "./awesome-books.png",
+    "skills": ["HTML5", "CSS3","JavaScript"],
+    "description": "An application that stores a list of books added to the browser's localstorage and display their title and authors on the page.",
+    "githubLink": "https://github.com/asharanjith/Awesome-Books-ES6",
+    "liveLink": "https://asharanjith.github.io/Awesome-Books-ES6/"
     }
 ]

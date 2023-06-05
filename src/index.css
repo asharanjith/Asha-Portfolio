@@ -70,9 +70,8 @@ h6 {
 }
 
 .image {
+  height: 100%;
   width: 100%;
-  object-fit: contain;
-  object-position: center;
   border-radius: 20px;
   animation: captionEntry 1s ease-in-out;
 }
@@ -81,9 +80,6 @@ h6 {
   animation: captionEntry 3s ease-in-out;
 }
 
-#contactImage {
-  animation: captionEntry 3s ease-in-out;
-}
 
 @keyframes captionEntry {
   0% {
