@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   padding: 20px;
 }
 
@@ -11,12 +10,10 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 100%;
 }
 
 .imageContainer {
-  height: 100vh;
-  width: 50%;
+  width: 60%;
 }
 
 .descriptionContainer {
@@ -31,6 +28,19 @@
   height: 100%;
   width: 100%;
 }
+h2{
+  font-size: 40px;
+  font-weight: bold;
+}
+h4{
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.description{
+  font-size: 20px;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .homeContainer {
@@ -39,6 +49,7 @@
     width: 100%;
     font-size: 15px;
     text-align: center;
+    padding-top: 50px;
   }
 
   .imageContainer {

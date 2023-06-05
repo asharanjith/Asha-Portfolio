@@ -8,7 +8,7 @@ import contactImage from '../../assets/contactImage.png';
 
 const Contact = ({ themeMode }) => {
   const lightModeStyles = {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgb(244 240 240)',
     color: 'rgb(32 161 196)',
   };
 
@@ -55,7 +55,7 @@ const Contact = ({ themeMode }) => {
             </span>
           </div>
         </div>
-        <div className={style.imageContainer}>
+        <div className={style.imageContainer} id="contactImage">
           <img src={contactImage} className={style.homeImage} alt="..." />
         </div>
       </div>

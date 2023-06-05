@@ -12,7 +12,7 @@ const Projects = ({ themeMode }) => {
   const [index, setIndex] = React.useState(0);
 
   const lightModeStyles = {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgb(244 240 240)',
     color: 'rgb(32 161 196)',
   };
 
@@ -26,7 +26,7 @@ const Projects = ({ themeMode }) => {
   };
   return (
     <div className={style.projectContainer} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
-      <h2 className="text-decoration-underline">My Recent Works</h2>
+      <h2 className="text-decoration-underline pb-2">My Recent Works</h2>
       <div className={style.slider}>
         <Carousel
           nextIcon={<AiFillRightCircle aria-hidden="true" className={`${style.icon}`} />}

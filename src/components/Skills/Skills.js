@@ -30,7 +30,7 @@ const Skills = ({ themeMode }) => {
     };
   }, []);
   const lightModeStyles = {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgb(244 240 240)',
     color: 'rgb(32 161 196)',
   };
 

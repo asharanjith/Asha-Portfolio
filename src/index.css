@@ -1,22 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Poppins:ital,wght@1,200&display=swap');
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab&display=swap');
 body {
   margin: 0;
-  font-family: 'Proxima Nova', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #61dafb;
-}
+  /* color: #61dafb; */
+  font-family: 'Roboto Slab', serif;
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
 }
 
 h1,
@@ -25,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto Slab', serif;
 }
 
 .carousel-caption {
@@ -33,19 +22,17 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
   background-color: #000;
-  opacity: 0.5;
   font-size: 1.2rem;
   animation: captionEntry 1s ease-in-out;
 }
 
 .buttonLink {
-  background-color: #61dafb;
+  background-color: rgb(129, 218, 251);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -60,6 +47,16 @@ h6 {
   background-color: #fff;
   color: #61dafb;
   border: 1px solid #61dafb;
+}
+
+.buttonLink a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.buttonLink a:hover{
+  text-decoration: none;
+  color: #61dafb;
 }
 
 .imageBox {
@@ -78,6 +75,14 @@ h6 {
   object-position: center;
   border-radius: 20px;
   animation: captionEntry 1s ease-in-out;
+}
+
+#imageBox {
+  animation: captionEntry 3s ease-in-out;
+}
+
+#contactImage {
+  animation: captionEntry 3s ease-in-out;
 }
 
 @keyframes captionEntry {

@@ -5,7 +5,7 @@ import style from './Home.module.css';
 
 const Home = ({ themeMode }) => {
   const lightModeStyles = {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgb(244 240 240)',
     color: 'rgb(32 161 196)',
     opacity: '1',
   };
@@ -17,7 +17,7 @@ const Home = ({ themeMode }) => {
   return (
     <div className={style.homePage} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
       <div className={style.homeContainer}>
-        <div className={style.imageContainer}>
+        <div className={style.imageContainer} id="imageBox">
           <img src={homepage} className={style.homeImage} alt="..." />
         </div>
         <div className={style.descriptionContainer}>
