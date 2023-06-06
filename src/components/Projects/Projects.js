@@ -56,18 +56,19 @@ const Projects = ({ themeMode }) => {
                         <span key={index} className={style.skills}>{skill}</span>
                       ))}
                     </div>
-                    <button type="button" className="buttonLink">
-                      <a href={project.liveLink} target="_blank" rel="noreferrer">
+                    <a href={project.liveLink} target="_blank" rel="noreferrer">
+                      <button type="button" className="buttonLink">
                         <BsFillEyeFill className={style.captionIcon} />
                         See Live
-                      </a>
-                    </button>
-                    <button type="button" className="buttonLink">
-                      <a href={project.githubLink} target="_blank" rel="noreferrer">
+                      </button>
+                    </a>
+                    <a href={project.githubLink} target="_blank" rel="noreferrer">
+                      <button type="button" className="buttonLink">
                         <TbSourceCode className={style.captionIcon} />
                         See Source
-                      </a>
-                    </button>
+                      </button>
+                    </a>
+
                   </Carousel.Caption>
                 </div>
               </div>

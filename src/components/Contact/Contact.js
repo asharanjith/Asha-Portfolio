@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'framer-motion';
 import { FaGithubSquare, FaLinkedin, FaAngellist } from 'react-icons/fa';
 import { BsMedium } from 'react-icons/bs';
 import { ImMail } from 'react-icons/im';
@@ -9,13 +10,17 @@ import contactImage from '../../assets/contactImage.png';
 
 const Contact = ({ themeMode }) => {
   const [state, handleSubmit] = useForm('mwkjdqza');
+  const [success, setSuccess] = React.useState(false);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     await handleSubmit(event);
-
+    setSuccess(true);
     const formElement = event.target;
     formElement.reset();
+    setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
   };
 
   React.useEffect(() => {
@@ -46,6 +51,21 @@ const Contact = ({ themeMode }) => {
   };
   return (
     <div className={style.homePage} style={themeMode === 'light' ? lightModeStyles : darkModeStyles}>
+      {success && (
+        <>
+          <motion.div
+            initial={{ opacity: 0, x: '30vw', scale: 0.3 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: '-30vw', scale: 0.3 }}
+            transition={{
+              type: 'spring', stiffness: 120,
+            }}
+            className={style.success}
+          >
+            <p>Thanks for reaching out, will get back to you</p>
+          </motion.div>
+        </>
+      )}
       <div className={style.homeContainer}>
         <div className={style.descriptionContainer}>
           <h2 className={style.title}>Hi,</h2>

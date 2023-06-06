@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   padding: 0 20px;
 }
 
@@ -30,6 +29,17 @@
 .homeImage {
   height: 100%;
   width: 100%;
+}
+
+.success {
+  position: fixed;
+  top: 10vh;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(25, 251, 25);
+  border-radius: 10px;
 }
 
 .mediaBox {
@@ -90,5 +100,10 @@
     align-items: center;
     justify-content: flex-start;
     padding-bottom: 20px;
+  }
+
+  .success {
+    font-size: 15px;
+    padding: 5px;
   }
 }
