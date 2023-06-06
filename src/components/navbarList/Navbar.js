@@ -44,7 +44,7 @@ const Navbar = ({
             to="/"
             className={({ isActive }) => (isActive ? `${style.isActive}` : '')}
           >
-            Home
+            About
           </NavLink>
           <NavLink
             onClick={() => {

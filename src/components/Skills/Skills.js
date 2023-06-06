@@ -163,7 +163,7 @@ const Skills = ({ themeMode }) => {
           <li>
             <FaLaptopCode />
             {'  '}
-            Remote Pair Programming
+            Remote Pair-Programming
           </li>
           <li>
             <SiRender />

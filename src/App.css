@@ -29,11 +29,46 @@
   animation: captionEntry 1s ease-in-out;
 }
 
+.buttonMedia {
+  background-color: rgb(129, 218, 251);
+  color: rgb(129, 218, 251);
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.buttonMedia:hover {
+  background-color: #fff;
+  color: rgb(32 161 196);
+  border: 1px solid #61dafb;
+}
+
+.buttonMedia a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.buttonMedia a:hover {
+  text-decoration: none;
+  color: rgb(32 161 196);
+}
+
 @media (max-width: 768px) {
   .scrollTop {
     bottom: 10px;
     right: 10px;
     padding: 5px;
+    font-size: 15px;
+  }
+
+  .buttonMedia {
     font-size: 15px;
   }
 }

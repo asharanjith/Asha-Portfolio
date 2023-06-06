@@ -57,13 +57,13 @@ const Projects = ({ themeMode }) => {
                       ))}
                     </div>
                     <button type="button" className="buttonLink">
-                      <a href={project.liveLink}>
+                      <a href={project.liveLink} target="_blank" rel="noreferrer">
                         <BsFillEyeFill className={style.captionIcon} />
                         See Live
                       </a>
                     </button>
                     <button type="button" className="buttonLink">
-                      <a href={project.githubLink}>
+                      <a href={project.githubLink} target="_blank" rel="noreferrer">
                         <TbSourceCode className={style.captionIcon} />
                         See Source
                       </a>

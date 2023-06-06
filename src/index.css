@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Poppins:ital,wght@1,200&display=swap');
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab&display=swap');
+
 body {
   margin: 0;
+
   /* color: #61dafb; */
   font-family: 'Roboto Slab', serif;
-
 }
 
 h1,
@@ -49,12 +50,12 @@ h6 {
   border: 1px solid #61dafb;
 }
 
-.buttonLink a{
+.buttonLink a {
   text-decoration: none;
   color: #fff;
 }
 
-.buttonLink a:hover{
+.buttonLink a:hover {
   text-decoration: none;
   color: #61dafb;
 }
@@ -79,7 +80,6 @@ h6 {
 #imageBox {
   animation: captionEntry 3s ease-in-out;
 }
-
 
 @keyframes captionEntry {
   0% {
