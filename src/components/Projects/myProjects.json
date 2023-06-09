@@ -52,5 +52,14 @@
     "description": "An application that stores a list of books added to the browser's localstorage and display their title and authors on the page.",
     "githubLink": "https://github.com/asharanjith/Awesome-Books-ES6",
     "liveLink": "https://asharanjith.github.io/Awesome-Books-ES6/"
-    }
+    },
+    {
+        "id": 8,
+        "name": "Space Traveler's Hub",
+        "image": "./space-traveller.png",
+        "skills": ["React", "Redux","JavaScript", "CSS3"],
+        "description": "The website models a space website that fetches data from real live data from spaceX and displays it on the UI. Missions and Reserve Rockets can be joined and reserved respectively, and are displayed in My profile page. ",
+        "githubLink": "https://github.com/asharanjith/space-travellers-hub",
+        "liveLink": "https://space-travellers-hub-six.vercel.app/"
+        }
 ]
